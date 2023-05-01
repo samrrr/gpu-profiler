@@ -193,7 +193,8 @@ impl GpuProfiler {
 }
 
 impl TimedFrame {
-    pub fn send_to_puffin(&self, gpu_frame_start_ns: puffin::NanoSecond) {
+    pub fn send_to_puffin(&self, _gpu_frame_start_ns: i64) {
+/*
         let mut stream = puffin::Stream::default();
         let mut gpu_time_accum: puffin::NanoSecond = 0;
         let mut puffin_scope_count = 0;
@@ -220,5 +221,7 @@ impl TimedFrame {
             }
             .as_stream_into_ref(),
         );
+ */
+        
     }
 }
